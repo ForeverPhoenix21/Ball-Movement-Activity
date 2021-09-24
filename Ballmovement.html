@@ -1,0 +1,79 @@
+<div id="ball1" style="
+  z-index:5;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  background:rgb(53, 10, 153)"></div>
+
+<div id="ball2" style="
+z-index:5;
+position:absolute;
+left:0px;
+top:100px;
+width:50px;
+height:50px;
+border-radius:50%;
+background:rgb(213, 216, 17)"></div>
+ 
+ <div id="ball3" style="
+  z-index:5;
+  position:absolute;
+  left:100px;
+  top: 0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:rgb(225, 7, 233)"></div>
+
+<script>
+
+var velocityX = 10;
+var velocityY = 10;
+var positionX = 0;
+var positionY = 0;
+var Xmax = 400;
+var Xmin = 0;
+var Ymax = 400;
+var Ymin = 0;
+var bounceX= true;
+var bounceY= false;
+var ball = document.getElementById('ball');
+
+function ballmove () {
+  if (bounceX) {
+    positionX = positionX - velocityX;
+  } else{
+    positionX = positionX + velocityX; 
+  }
+  if(positionX >=Xmax){
+   bounceX = true;
+  }
+  if (positionX <=Xmin) {
+    bounceX = false;
+  }
+
+  if (bounceY){
+  positionY = positionY - velocityY;
+  } else{
+    positionY = positionY + velocityY;
+  }  
+
+  if (positionY >= Ymax){
+    bounceY = true;
+  }
+  if (positionY <= Ymin){
+    bounceY = false;
+  }
+
+  ball1.style.left = positionX + 'px';
+  ball1.style.top = positionY + 'px';
+  ball2.style.left = positionX +'px';
+  ball3.style.top = positionX + 'px';
+  
+}
+
+setInterval (ballmove, 50);
+</script>
