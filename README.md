@@ -2,10 +2,10 @@
 # BallMovement
 
 <p> Ball Movement was created as a continual learning project in one dimensional motion.</P>
-<!-- 
-<a href="https://foreverphoenix21.github.io/BallMovementActivity/"> -->
+
+<a href="https://foreverphoenix21.github.io/Ball-Movement-Activity/">
   <img src="ballMovement.png" alt="Ball Movement link" width="200" /> 
-<!-- </a> -->
+</a>
 
 ## Description:
 
